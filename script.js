@@ -16,16 +16,22 @@ function start() {
     let userLastName = prompt("What is your last name?");
     console.log(userName);
     console.log(userLastName);
-    addName(userName);
+    addName(userLastName, userName);
+    addSeparator();
+    userName = prompt("What is your name?");
+    userLastName = prompt();
 }
 // Function for the 1st exercise
-    function addName(newName, lastName) {
-        let h2 = document.createElement("h2");
-        h2.innerText = "newName, lastName";
-        document.appendChild("h2");
+    function addName(lastName, firstName) {
+        let name = document.createElement("h2");
+        name.innerText = lastName + firstName;
+        document.body.appendChild(name);
 }
 
 // Function for 3rd exercise
-
+    function addSeparator() {
+        let separator = document.createElement("hr");
+        document.body.appendChild(separator);
+    }
 
 
